@@ -1,0 +1,29 @@
+{
+  "name": "atii",
+  "version": "1.0.0",
+  "description": "totp for fasa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tritm/atii.git"
+  },
+  "keywords": [
+    "atii"
+  ],
+  "author": "tritm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tritm/atii/issues"
+  },
+  "homepage": "https://github.com/tritm/atii#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.0-beta4",
+    "otplib": "^9.0.0",
+    "pub": "^0.2.0",
+    "qrcode": "^1.2.0"
+  }
+}

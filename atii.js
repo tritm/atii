@@ -183,15 +183,11 @@ app.get('/index.html', function (req, res) {
   res.sendFile(__dirname + "/" + "index.html");
 })
 app.get('/process_get', function (req, res) {
-
-  // Chuan bi output trong dinh dang JSON
-  var response = {
-    Phone: req.query.phone,
-    OTP: req.query.otp
-  };
-  console.log(response);
-  res.end(JSON.stringify(response));
-})
+  qrgen_phone(req.query.phone,function(fdocs,imageUrl){
+    res.writeHead(200,{'Content-type':'text/html'});
+    res.write("<html><body><img src="+imageUrl+"></body></html>");
+  });
+});
 app.post('/process_post', urlencodedParser, function (req, res) {
 
   // Chuan bi output trong dinh dang JSON
