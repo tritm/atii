@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8"/>
+    <script src="../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <style>
+        table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
 </head>
-<body>
-$END$
+<body ng-app="myApp" ng-controller="myController">
+<h1>{{title}}</h1>
+<input type="" name="" ng-model="userId"><button ng-click="getName()">Get</button><button ng-click="listUsers()">List Users</button>
+<h3>Ket qua: {{listNames}}}</h3>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+    </tr>
+    <tr ng-repeat="u in listNames">
+        <td>{{ u.id }}</td>
+        <td>{{ u.name }}</td>
+    </tr>
+</table>
 </body>
 </html>

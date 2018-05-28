@@ -22,8 +22,11 @@
   "dependencies": {
     "express": "^4.16.3",
     "mongodb": "^3.1.0-beta4",
+    "npm": "^6.1.0",
     "otplib": "^9.0.0",
+    "path": "^0.12.7",
     "pub": "^0.2.0",
-    "qrcode": "^1.2.0"
+    "qrcode": "^1.2.0",
+    "serve-static": "^1.13.2"
   }
 }
