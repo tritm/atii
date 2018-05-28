@@ -20,16 +20,19 @@
 </head>
 <body ng-app="myApp" ng-controller="myController">
 <h1>{{title}}</h1>
-<input type="" name="" ng-model="userId"><button ng-click="getName()">Get</button><button ng-click="listUsers()">List Users</button>
-<h3>Ket qua: {{listNames}}}</h3>
+<!--<input type="" name="" ng-model="userId"><button ng-click="getName()">Get</button>-->
+<button ng-click="listUsers()">List Users</button>
+<h4>List of Internet Subscribers</h4>
 <table>
     <tr>
-        <th>ID</th>
         <th>NAME</th>
+        <th>PHONE</th>
+        <th>SECRET</th>
     </tr>
     <tr ng-repeat="u in listNames">
-        <td>{{ u.id }}</td>
         <td>{{ u.name }}</td>
+        <td>{{ u.phone}}</td>
+        <td>{{ u.secret}}</td>
     </tr>
 </table>
 </body>

@@ -59,29 +59,29 @@ function qrgen_secret(secret, callback) {
 // KẾT NỐI ĐẾN( MONGODB
 
 
-// MongoClient.connect(url, function (err, client) {
-//   assert.equal(null, err);
-//   console.log("Connected successfully to server");
-//   const db = client.db(dbName);
-//   const collection = db.collection('documents');
-//   // collection.insertMany(idocs, function (err, result) {
-//   // collection.deleteOne({token: 949770}, function (err, result) {
-//   //   assert.equal(err, null);
-//   //   assert.equal(1, result.result.n);
-//   //   console.log("Removed the document with the field a equal to 3");
-//   // });
-//   // collection.find({}).toArray(function (err, docs) {
-//   //   console.log("Found the following records");
-//   //   console.log(docs);
-//   // });
-//   collection.find({name: "Tri Trinh"}).toArray(function (err, docs) {
-//     console.log(docs);
-//     console.log("name   = "+docs["0"].name);
-//     console.log("phone  = "+docs["0"].phone);
-//     console.log("secret = "+docs["0"].secret);
-//   });
-//   client.close();
-// });
+MongoClient.connect(url, function (err, client) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+  const db = client.db(dbName);
+  const collection = db.collection('documents');
+  // collection.insertMany(idocs, function (err, result) {
+  // collection.deleteOne({token: 949770}, function (err, result) {
+  //   assert.equal(err, null);
+  //   assert.equal(1, result.result.n);
+  //   console.log("Removed the document with the field a equal to 3");
+  // });
+  // collection.find({}).toArray(function (err, docs) {
+  //   console.log("Found the following records");
+  //   console.log(docs);
+  // });
+  collection.find({name: "Duong"}).toArray(function (err, docs) {
+    console.log(docs);
+    // console.log("name   = "+docs["0"].name);
+    // console.log("phone  = "+docs["0"].phone);
+    // console.log("secret = "+docs["0"].secret);
+  });
+  client.close();
+});
 
 //FUNCTION INSERT DOCUMENTS
 const insertDocuments = function (db, collection, idocs, callback) {

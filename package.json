@@ -21,7 +21,7 @@
   "homepage": "https://github.com/tritm/atii#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "mongodb": "^3.1.0-beta4",
+    "mongodb": "^3.0.8",
     "npm": "^6.1.0",
     "otplib": "^9.0.0",
     "path": "^0.12.7",
