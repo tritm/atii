@@ -22,11 +22,11 @@
 <body ng-app="myApp" ng-controller="myController">
 <h1>{{title}}</h1>
 <button ng-click="listUsers()">List Users</button><button ng-click="clean()">Clean</button> <br>
-<button ng-click="deleteUser()">Delete User</button><input type="" name="" ng-model="phone2delete"> <br>
+<button ng-click="deleteUser()">Delete User</button><input type="" name="" placeholder="Phone Number" ng-model="phone2delete"> <br>
 <button ng-click="insertUser()">Insert Users</button>
-<input type="" name="" ng-model="name2insert"><input type="" name="" ng-model="phone2insert"> <br>
+<input type="" name="" placeholder="Name" ng-model="name2insert"><input type="" name="" placeholder="Phone Number" ng-model="phone2insert"> <br>
 <button ng-click="checkToken()">Check Token</button>
-<input type="" name="" ng-model="phone2check"><input type="" name="" ng-model="token2check">
+<input type="" name="" placeholder="Name" ng-model="phone2check"><input type="" name="" placeholder="Phone Number" ng-model="token2check">
 
 <h4>List of Internet Subscribers</h4>
 <table>
