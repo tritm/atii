@@ -75,11 +75,24 @@ app.delete('/api/clean/', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
     const collection = db.collection('documents');
-    collection.deleteMany({phone:"" || null}, function(err, result) {
+    collection.deleteMany({phone:""}, function(err, result) {
       collection.find({}).toArray(function (err, docs) {console.log(JSON.stringify(docs))});
       if (err) console.log("[TRITM] error = "+err);
       console.log("[TRITM] result = "+result);
       client.close();
     });
   });
-})
+});
+app.get('/api/checktoken', function(req,res){
+  const phone = req.query.phone;
+  const token = req.query.token;
+  MongoClient.connect(mongourl, function (err, client) {
+    const db = client.db(dbName);
+    const collection = db.collection('documents');
+    collection.find({phone:phone}).toArray(function(err, result) {
+      const isValid = otplib.authenticator.check(token, result["0"].secret);
+      res.send(isValid);
+      client.close();
+    });
+  });
+});

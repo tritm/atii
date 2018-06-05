@@ -3,7 +3,7 @@ var app = angular.module('myApp', []);
 app.controller('myController', myController);
 
 function myController($scope, $http) {
-  $scope.title = 'Xin chao!!!';
+  $scope.title = 'TOTP CHECK FOR ATII';
   $scope.userName = '';
   $scope.userId = 0;
 
@@ -36,6 +36,15 @@ function myController($scope, $http) {
   $scope.clean = function(){
     $http.delete('/api/clean/').then(function(result){
       console.log("[TRITM]"+result);
+    })
+  };
+  $scope.checkToken = function(){
+    var data = $.param({
+      phone:$scope.phone2check,
+      token:$scope.token2check
+    });
+    $http.get('/api/checktoken?'+data).then(function(result){
+      $scope.tokencheck = result.data;
     })
   }
 }
