@@ -46,5 +46,11 @@ function myController($scope, $http) {
     $http.get('/api/checktoken?'+data).then(function(result){
       $scope.tokencheck = result.data;
     })
+  };
+  $scope.showQR = function(){
+    $http.get('/api/showqr/'+$scope.phone2show).then(function(result){
+      $scope.imageUrl = result.data;
+      console.log(result.data);
+    })
   }
 }

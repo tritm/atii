@@ -96,3 +96,18 @@ app.get('/api/checktoken', function(req,res){
     });
   });
 });
+app.get('/api/showQR/:phone2show', function(req, res) {
+  const phone = req.params.phone2show;
+  MongoClient.connect(mongourl, function (err, client) {
+    const db = client.db(dbName);
+    const collection = db.collection('documents')
+    collection.find({phone:phone}).toArray(function(err, result) {
+      const secret = result["0"].secret;
+      const otpauth = otplib.authenticator.keyuri('user', 'service', secret);
+      qrcode.toDataURL(otpauth, (err, imageUrl) => {
+        res.send(imageUrl);
+        client.close();
+      });
+    });
+  });
+})

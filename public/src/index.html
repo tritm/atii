@@ -27,9 +27,11 @@
 <input type="" name="" placeholder="Name" ng-model="name2insert"><input type="" name="" placeholder="Phone Number" ng-model="phone2insert"> <br>
 <button ng-click="checkToken()">Check Token</button>
 <input type="" name="" placeholder="Phone Number" ng-model="phone2check">
-<input type="" name="" placeholder="Token" ng-model="token2check">
-
-Result = {{tokencheck}}
+<input type="" name="" placeholder="Token" ng-model="token2check"> <br>
+Result of Checking Token: {{tokencheck}} <br>
+<button ng-click="showQR()">Show QR CODE</button>
+<input type="" name="" placeholder="Phone Number" ng-model="phone2show"> <br>
+<img ng-src="{{imageUrl}}">
 
 <h4>List of Internet Subscribers</h4>
 <table>
