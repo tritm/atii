@@ -19,4 +19,23 @@ function myController($scope, $http) {
       $scope.listNames = result.data;
     })
   };
+  $scope.deleteUser = function(){
+    $http.delete('/api/deleteUser/'+$scope.phone2delete).then(function(result){
+      console.log(result);
+    })
+  };
+  $scope.insertUser = function(){
+    var data = $.param({
+      name:$scope.name2insert,
+      phone:$scope.phone2insert
+    });
+    $http.post('/api/insertUser?'+data).then(function(result){
+      console.log(result);
+    })
+  };
+  $scope.clean = function(){
+    $http.delete('/api/clean/').then(function(result){
+      console.log("[TRITM]"+result);
+    })
+  }
 }

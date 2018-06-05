@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <script src="../modules/angular/angular.js"></script>
     <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style>
         table, th , td {
             border: 1px solid grey;
@@ -20,8 +21,13 @@
 </head>
 <body ng-app="myApp" ng-controller="myController">
 <h1>{{title}}</h1>
-<!--<input type="" name="" ng-model="userId"><button ng-click="getName()">Get</button>-->
-<button ng-click="listUsers()">List Users</button>
+<button ng-click="listUsers()">List Users</button><button ng-click="clean()">Clean</button> <br>
+<button ng-click="deleteUser()">Delete User</button><input type="" name="" ng-model="phone2delete"> <br>
+<button ng-click="insertUser()">Insert Users</button>
+<input type="" name="" ng-model="name2insert"><input type="" name="" ng-model="phone2insert"> <br>
+<button ng-click="checkToken()">Check Token</button>
+<input type="" name="" ng-model="phone2check"><input type="" name="" ng-model="token2check">
+
 <h4>List of Internet Subscribers</h4>
 <table>
     <tr>
