@@ -2,8 +2,240 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bc6aaee-f4bf-4c5a-bfbf-8e9087edc45c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/accordion/accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/accordion/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/accordion/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/accordion/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/accordion/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/accordion/test/accordion.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/alert/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/alert/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/alert/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/alert/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/alert/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/alert/test/alert.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/buttons/buttons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/buttons/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/buttons/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/buttons/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/buttons/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/buttons/test/buttons.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/docs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/carousel/test/carousel.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/collapse/collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/collapse/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/collapse/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/collapse/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/collapse/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/collapse/test/collapse.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/collapse/test/collapseHorizontally.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dateparser/dateparser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dateparser/docs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dateparser/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dateparser/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dateparser/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dateparser/test/dateparser.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepicker/test/datepicker.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/datepickerPopup/test/popup.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/debounce/debounce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/debounce/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/debounce/test/debounce.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dropdown/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dropdown/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dropdown/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dropdown/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dropdown/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dropdown/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/dropdown/test/dropdown.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/isClass/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/isClass/isClass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/isClass/test/isClass.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/modal/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/modal/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/modal/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/modal/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/modal/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/modal/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/modal/test/modal.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/multiMap/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/multiMap/multiMap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/multiMap/test/multiMap.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pager/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pager/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pager/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pager/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pager/pager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pager/test/pager.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pagination/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pagination/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pagination/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pagination/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pagination/pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/pagination/test/pagination.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/paging/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/paging/paging.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/paging/test/paging.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/test/popover-html.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/test/popover-template.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/popover/test/popover.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/position.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/position.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/test/position.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/position/test/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/progressbar/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/progressbar/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/progressbar/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/progressbar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/progressbar/progressbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/progressbar/test/progressbar.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/rating/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/rating/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/rating/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/rating/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/rating/rating.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/rating/test/rating.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/stackedMap/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/stackedMap/stackedMap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/stackedMap/test/stackedMap.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabindex/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabindex/tabindex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabindex/test/tabindex.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabs/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabs/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabs/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabs/tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tabs/test/tabs.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/test/timepicker.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/timepicker/timepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/test/tooltip-template.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/test/tooltip.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/test/tooltip2.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/tooltip/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/docs/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/docs/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/index-nocss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/test/typeahead-highlight-ngsanitize.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/test/typeahead-highlight.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/test/typeahead-parser.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/test/typeahead-popup.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/test/typeahead.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/typeahead.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/src/typeahead/typeahead.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/accordion/accordion-group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/accordion/accordion-group.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/accordion/accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/accordion/accordion.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/alert/alert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/alert/alert.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/carousel/carousel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/carousel/carousel.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/carousel/slide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/carousel/slide.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/datepicker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/datepicker.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/day.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/day.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/month.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/month.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/popup.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/year.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepicker/year.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepickerPopup/popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/datepickerPopup/popup.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/modal/backdrop.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/modal/window.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/modal/window.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/pager/pager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/pager/pager.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/pagination/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/pagination/pagination.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/popover/popover-html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/popover/popover-html.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/popover/popover-template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/popover/popover-template.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/popover/popover.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/popover/popover.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/progressbar/bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/progressbar/bar.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/progressbar/progress.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/progressbar/progress.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/progressbar/progressbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/progressbar/progressbar.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/rating/rating.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/rating/rating.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tabs/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tabs/tab.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tabs/tabset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tabs/tabset.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/timepicker/timepicker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/timepicker/timepicker.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tooltip/tooltip-html-popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tooltip/tooltip-html-popup.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tooltip/tooltip-popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tooltip/tooltip-popup.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tooltip/tooltip-template-popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/tooltip/tooltip-template-popup.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/typeahead/typeahead-match.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/typeahead/typeahead-match.html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/typeahead/typeahead-popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-ui-bootstrap/template/typeahead/typeahead-popup.html.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/index.html" afterDir="false" />
     </list>
@@ -22,27 +254,11 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+            <state relative-caret-position="1365">
+              <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
               <folding>
-                <element signature="e#1418#1770#0" />
                 <element signature="e#1817#2522#0" />
-                <element signature="e#2568#3011#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="localhost/atiidb/documents" pinned="false" current-in-tab="false">
-        <entry file="mongo://localhost/atiidb/documents">
-          <provider selected="true" editor-type-id="MongoData" />
-        </entry>
-      </file>
-      <file leaf-file-name="atii.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atii.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -50,12 +266,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              <folding>
-                <element signature="e#234#355#0" />
-                <element signature="e#305#349#0" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="61" column="34" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -63,8 +275,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="29" column="67" lean-forward="true" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
+            <state relative-caret-position="-53">
+              <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -135,7 +347,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,12 +363,20 @@
               <item name="ATII" type="b2602c69:ProjectViewProjectNode" />
               <item name="ATII" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ATII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ATII" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="angular" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,6 +384,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.mongoOptions" />
   </component>
@@ -216,6 +436,8 @@
       <workItem from="1527815348244" duration="18341000" />
       <workItem from="1528122702009" duration="444000" />
       <workItem from="1528161881602" duration="2461000" />
+      <workItem from="1528189389480" duration="5098000" />
+      <workItem from="1528209230476" duration="3767000" />
     </task>
     <task id="LOCAL-00001" summary="Finish client tables">
       <created>1527127842839</created>
@@ -231,49 +453,43 @@
       <option name="project" value="LOCAL" />
       <updated>1528166721163</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finish showing QR Image on website">
+      <created>1528192130497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528192130497</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74440000" />
+    <option name="totallyTimeSpent" value="83305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49311295" visible="true" weight="0.25928918" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4983845" weight="0.32965517" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5016155" side_tool="true" weight="0.2" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4983845" weight="0.18482758" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24965517" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" visible="true" weight="0.1558966" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50080776" side_tool="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49919224" weight="0.22344828" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32551724" />
+      <window_info id="Structure" order="1" sideWeight="0.5068871" side_tool="true" weight="0.13004847" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.15831988" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49632353" visible="true" weight="0.0993538" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Tail" order="7" />
-      <window_info id="Structure" order="1" sideWeight="0.5036765" side_tool="true" visible="true" weight="0.0993538" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3324138" />
-      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.16275862" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49608356" visible="true" weight="0.13004847" />
-      <window_info id="Structure" order="1" sideWeight="0.50391644" side_tool="true" visible="true" weight="0.13004847" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49919224" visible="true" weight="0.47172415" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.066206895" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" visible="true" weight="0.1558966" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.54068965" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32965517" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50080776" side_tool="true" weight="0.32965517" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,24 +541,12 @@
     </ignored-roots>
     <MESSAGE value="Finish client tables" />
     <MESSAGE value="Finish insert, clean, delete," />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish insert, clean, delete," />
+    <MESSAGE value="Finish showing QR Image on website" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish showing QR Image on website" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/index.js</url>
-          <line>78</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/index.js</url>
-          <line>92</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="85" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -407,13 +611,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/atii.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2910">
-          <caret line="194" column="36" lean-forward="true" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7080">
@@ -715,13 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atii.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongodb/lib/collection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -743,33 +933,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/atii.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="53" column="4" selection-start-line="52" selection-start-column="1" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+        <state relative-caret-position="1365">
+          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
           <folding>
-            <element signature="e#1418#1770#0" />
             <element signature="e#1817#2522#0" />
-            <element signature="e#2568#3011#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-688">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <element signature="e#234#355#0" />
-            <element signature="e#305#349#0" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="61" column="34" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="29" column="67" lean-forward="true" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
+        <state relative-caret-position="-53">
+          <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
         </state>
       </provider>
     </entry>
