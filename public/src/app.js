@@ -1,5 +1,5 @@
 var app = angular.module('myApp', []);
-
+// angular.module('myApp', ['ui.bootstrap']);
 app.controller('myController', myController);
 
 function myController($scope, $http) {
@@ -29,9 +29,11 @@ function myController($scope, $http) {
       name:$scope.name2insert,
       phone:$scope.phone2insert
     });
+    $scope.name2insert = '';
+    $scope.phone2insert = '';
     $http.post('/api/insertUser?'+data).then(function(result){
       console.log(result);
-    })
+    });
   };
   $scope.clean = function(){
     $http.delete('/api/clean/').then(function(result){
@@ -44,8 +46,13 @@ function myController($scope, $http) {
       token:$scope.token2check
     });
     $http.get('/api/checktoken?'+data).then(function(result){
-      $scope.tokencheck = result.data;
-    })
+      if (result.data) {
+        $scope.tokencheck = "OK";
+      }
+      else {
+        $scope.tokencheck = "NOK";
+      };
+    });
   };
   $scope.showQR = function(){
     $http.get('/api/showqr/'+$scope.phone2show).then(function(result){

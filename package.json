@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/tritm/atii#readme",
   "dependencies": {
-    "@ng-bootstrap/ng-bootstrap": "^2.0.0",
     "angular-ui-bootstrap": "^2.5.6",
-    "bootstrap": "^3.3.7",
     "express": "^4.16.3",
     "jquery": "file:node_modules/jquery",
     "mongodb": "^3.0.8",

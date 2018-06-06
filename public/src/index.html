@@ -5,6 +5,10 @@
     <script src="../modules/angular/angular.js"></script>
     <script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         table, th , td {
             border: 1px solid grey;
@@ -17,20 +21,42 @@
         table tr:nth-child(even) {
             background-color: #ffffff;
         }
+        .button {
+            border: none;
+            color: white;
+            padding: 5px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button1 {background-color: #4CAF50;} /* Green */
+        .button2 {background-color: #008CBA;} /* Blue */
+        .button3 {background-color: #f44336;} /* Red */
+        .button4 {background-color: #e7e7e7; color: black;} /* Gray */
+        .button5 {background-color: #555555;} /* Black */
     </style>
 </head>
 <body ng-app="myApp" ng-controller="myController">
 <h1>{{title}}</h1>
-<button ng-click="listUsers()">List Users</button><button ng-click="clean()">Clean</button> <br>
-<button ng-click="deleteUser()">Delete User</button><input type="" name="" placeholder="Phone Number" ng-model="phone2delete"> <br>
-<button ng-click="insertUser()">Insert Users</button>
-<input type="" name="" placeholder="Name" ng-model="name2insert"><input type="" name="" placeholder="Phone Number" ng-model="phone2insert"> <br>
-<button ng-click="checkToken()">Check Token</button>
-<input type="" name="" placeholder="Phone Number" ng-model="phone2check">
-<input type="" name="" placeholder="Token" ng-model="token2check"> <br>
-Result of Checking Token: {{tokencheck}} <br>
-<button ng-click="showQR()">Show QR CODE</button>
-<input type="" name="" placeholder="Phone Number" ng-model="phone2show"> <br>
+<button class="button button2" style="width: 15%" ng-click="clean()">Clean</button><br>
+<button class="button button2" style="width: 15%" ng-click="listUsers()">List Users</button>&nbsp;&nbsp;<br>
+
+<button class="button button2" style="width: 15%" ng-click="deleteUser()">Delete User</button>&nbsp;&nbsp;
+<input  class="box" style="width: 15%" type="" name="" placeholder="Phone Number" ng-model="phone2delete"><br>
+
+<button class="button button2" style="width: 15%" ng-click="insertUser()">Insert Users</button>&nbsp;&nbsp;
+<input type="" name="" placeholder="Name" ng-model="name2insert">&nbsp
+<input type="" name="" placeholder="Phone Number" ng-model="phone2insert"><br>
+
+<button class="button button2" style="width: 15%" ng-click="checkToken()">Check Token</button>&nbsp;&nbsp;
+<input type="" name="" placeholder="Phone Number" ng-model="phone2check">&nbsp;
+<input type="" name="" placeholder="Token" ng-model="token2check"> {{tokencheck}}<br>
+
+<button class="button button2" style="width: 15%" ng-click="showQR()">Show QR code</button>&nbsp;&nbsp;
+<input type="" name="" placeholder="Phone Number" ng-model="phone2show"><br>
 <img ng-src="{{imageUrl}}">
 
 <h4>List of Internet Subscribers</h4>
