@@ -49,6 +49,10 @@ app.delete('/api/deleteUser/:phone2delete', function(req, res) {
     const collection = db.collection('documents')
     collection.deleteMany({phone:phone2delete}, function(err, result) {
       if (err) console.log("[TRITM] error = "+err);
+      collection.find({}).toArray(function (err, docs) {
+        if (err) console.log(err);
+        res.send(docs);
+      });
       client.close();
     });
   });
@@ -66,10 +70,13 @@ app.post('/api/insertUser', function(req,res){
     const collection = db.collection('documents')
     collection.insertOne({name:name,phone:phone,secret:secret}, function(err, result) {
       if (err) console.log("[TRITM] error = "+err);
-      console.log("[TRITM] result = "+result)
+      collection.find({}).toArray(function (err, docs) {
+        if (err) console.log(err);
+        res.send(docs);
+      });
       client.close();
-    })
-  })
+    });
+  });
 });
 app.delete('/api/clean/', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {

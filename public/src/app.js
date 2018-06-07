@@ -21,7 +21,7 @@ function myController($scope, $http) {
   };
   $scope.deleteUser = function(){
     $http.delete('/api/deleteUser/'+$scope.phone2delete).then(function(result){
-      console.log(result);
+      $scope.listNames = result.data;
     })
   };
   $scope.insertUser = function(){
@@ -32,7 +32,7 @@ function myController($scope, $http) {
     $scope.name2insert = '';
     $scope.phone2insert = '';
     $http.post('/api/insertUser?'+data).then(function(result){
-      console.log(result);
+      $scope.listNames = result.data;
     });
   };
   $scope.clean = function(){

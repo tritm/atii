@@ -6,29 +6,6 @@ const assert = require('assert');
 const url = 'mongodb://localhost:27017';
 const dbName = 'atiidb';
 
-// // THIẾT LẬP BẢNG IDOCS CHỨA CÁC THÔNG TIN VỀ KHÁCH HÀNG: NAME, PHONE, SECRET VÀ LƯU VÀO MONGODB
-// var secrets = [];
-// var idocs = [];
-// var names = ["Tri Trinh", "Hoang Tran", "Duong Le", "Bang Nguyen", "Hung Bui"];
-// var phones = ["0916600220", "0987606236", "0888960522", "0913525525", "0888569869"];
-//
-// for (var i = 0; i < 5; i++) {
-//   idocs[i] = {
-//     name: names[i], phone: phones[i], secret: otplib.authenticator.generateSecret(), imageUrl =
-//   }
-// }
-//
-// MongoClient.connect(url, function (err, client) {
-//   assert.equal(null, err);
-//   console.log("Connected successfully to server");
-//   const db = client.db(dbName);
-//   const collection = db.collection('documents');
-//   collection.insertMany(idocs, function (err, result) {
-//     collection.find({}).toArray(function (err, docs) {});
-//   });
-//   client.close();
-// });
-
 //SINH RA QRCODE DUA VAO SECRET
 
 qrgen_phone("0916600220",function(fdocs,imageUrl){
