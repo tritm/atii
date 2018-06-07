@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myApp" ng-controller="myController">
+<h1>{{title}}</h1>
+<button class="button button2" style="width: 15%" ng-click="clean()">Clean</button><br>
+<button class="button button2" style="width: 15%" ng-click="listUsers()">List Users</button>&nbsp;&nbsp;<br>
+
+<button class="button button2" style="width: 15%" ng-click="deleteUser()">Delete User</button>&nbsp;&nbsp;
+<input  class="box" style="width: 15%" type="" name="" placeholder="Phone Number" ng-model="phone2delete"><br>
+
+<button class="button button2" style="width: 15%" ng-click="insertUser()">Insert Users</button>&nbsp;&nbsp;
+<input type="" name="" placeholder="Name" ng-model="name2insert">&nbsp
+<input type="" name="" placeholder="Phone Number" ng-model="phone2insert"><br>
+
+<button class="button button2" style="width: 15%" ng-click="checkToken()">Check Token</button>&nbsp;&nbsp;
+<input type="" name="" placeholder="Phone Number" ng-model="phone2check">&nbsp;
+<input type="" name="" placeholder="Token" ng-model="token2check"> {{tokencheck}}<br>
+
+<button class="button button2" style="width: 15%" ng-click="showQR()">Show QR code</button>&nbsp;&nbsp;
+<input type="" name="" placeholder="Phone Number" ng-model="phone2show"><br>
+<img ng-src="{{imageUrl}}">
+
+<h4>List of Internet Subscribers</h4>
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>PHONE</th>
+        <th>SECRET</th>
+    </tr>
+    <tr ng-repeat="u in listNames">
+        <td>{{ u.name }}</td>
+        <td>{{ u.phone}}</td>
+        <td>{{ u.secret}}</td>
+    </tr>
+</table>
+</body>
+</html>

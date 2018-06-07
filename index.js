@@ -20,8 +20,14 @@ app.listen(3000,function(){
 
 // var listUsers = [{id: 1, name: 'Nguyễn Văn A'}, {id: 2, name: 'Hoàng Thị B'}, {id: 3, name: 'Phan Huy C'}];
 var listUsers;
-app.get('/', function(request, response){
-  response.redirect('/src/index.html');
+app.get('/', function(req, res){
+  res.redirect('/src/client.html');
+});
+app.get('/client', function(req, res){
+  res.redirect('/src/client.html');
+});
+app.get('/admin', function(req, res){
+  res.redirect('/src/admin.html');
 });
 app.get('/api/getName/:userId', function(req, res){
   var userId = req.params.userId;
@@ -78,6 +84,8 @@ app.post('/api/insertUser', function(req,res){
     });
   });
 });
+/*TODO: Inclue this clean function to Delete
+if var of delete = null, clean*/
 app.delete('/api/clean/', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
