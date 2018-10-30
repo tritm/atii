@@ -10,6 +10,7 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const mongourl = 'mongodb://localhost:27017';
 const dbName = 'atiidb';
+const http = require('http');
 
 app.use(serveStatic(path.join(__dirname, 'public')));
 
@@ -107,6 +108,25 @@ app.get('/api/checktoken', function(req,res){
     collection.find({phone:phone}).toArray(function(err, result) {
       const isValid = otplib.authenticator.check(token, result["0"].secret);
       res.send(isValid);
+      if (isValid) {
+        var http = require('http');
+        var request = http.request({
+            'hostname': 'rd5',
+            'port':     '8080',
+            'path':     '/vtn/onos/v1/applications/org.opencord.vtn/active',
+            'auth':     'onos:rocks',
+            'method':   'POST'
+          },
+          function (response) {
+            console.log('STATUS: ' + response.statusCode);
+            console.log('HEADERS: ' + JSON.stringify(response.headers));
+            response.setEncoding('utf8');
+            response.on('data', function (chunk) {
+              console.log('BODY: ' + chunk);
+            });
+          });
+        request.end();
+      };
       client.close();
     });
   });

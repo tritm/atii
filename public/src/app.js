@@ -17,6 +17,7 @@ function myController($scope, $http) {
       //NOTE: Kết quả result nhận về sẽ là 1 dict với rất nhiều trường: data, status, config, statusText, xhrStatus
       //Mình thường chỉ cần trường data
       $scope.listNames = result.data;
+      console.log('Tri all ListUsers');
     })
   };
   $scope.deleteUser = function(){
