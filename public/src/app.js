@@ -20,6 +20,10 @@ function myController($scope, $http) {
       console.log('Tri all ListUsers');
     })
   };
+  $scope.deleteHost = function(){
+    $http.delete('/api/deleteHost/'+$scope.mac2delete).then(function(result){
+    })
+  };
   $scope.deleteUser = function(){
     $http.delete('/api/deleteUser/'+$scope.phone2delete).then(function(result){
       $scope.listNames = result.data;

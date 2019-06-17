@@ -24,6 +24,7 @@
     "express": "^4.16.3",
     "jquery": "file:node_modules/jquery",
     "mongodb": "^3.0.8",
+    "mongoose": "^5.4.13",
     "npm": "^6.1.0",
     "otplib": "^9.0.0",
     "path": "^0.12.7",
