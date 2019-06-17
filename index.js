@@ -3,6 +3,7 @@ var url = require('url');
 var express = require('express');
 var serveStatic = require('serve-static');
 var app = express();
+var tools = require('./public/src/tools');
 // OTPLIB
 const otplib = require('otplib');
 const qrcode = require('qrcode');
@@ -10,13 +11,15 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const mongourl = 'mongodb://localhost:27017';
 const dbName = 'atiidb';
-const http = require('http');
+// const http = require('http');
+
 
 app.use(serveStatic(path.join(__dirname, 'public')));
 
 //Tạo port để lắng nghe request từ client gọi lên.
 app.listen(3000,function(){
   console.log('Node server running @ http://localhost:3000');
+  console.log('__dirname = %s',__dirname);
 });
 
 // var listUsers = [{id: 1, name: 'Nguyễn Văn A'}, {id: 2, name: 'Hoàng Thị B'}, {id: 3, name: 'Phan Huy C'}];
@@ -85,8 +88,6 @@ app.post('/api/insertUser', function(req,res){
     });
   });
 });
-/*TODO: Inclue this clean function to Delete
-if var of delete = null, clean*/
 app.delete('/api/clean/', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
@@ -105,30 +106,8 @@ app.get('/api/checktoken', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
     const collection = db.collection('documents');
-    collection.find({phone:phone}).toArray(function(err, result) {
-      const isValid = otplib.authenticator.check(token, result["0"].secret);
-      res.send(isValid);
-      if (isValid) {
-        var http = require('http');
-        var request = http.request({
-            'hostname': 'rd5',
-            'port':     '8080',
-            'path':     '/vtn/onos/v1/applications/org.opencord.vtn/active',
-            'auth':     'onos:rocks',
-            'method':   'POST'
-          },
-          function (response) {
-            console.log('STATUS: ' + response.statusCode);
-            console.log('HEADERS: ' + JSON.stringify(response.headers));
-            response.setEncoding('utf8');
-            response.on('data', function (chunk) {
-              console.log('BODY: ' + chunk);
-            });
-          });
-        request.end();
-      };
-      client.close();
-    });
+    tools.activateVtn(db, collection, phone, token, res, function(){});
+    client.close();
   });
 });
 app.get('/api/showQR/:phone2show', function(req, res) {
@@ -145,4 +124,8 @@ app.get('/api/showQR/:phone2show', function(req, res) {
       });
     });
   });
-})
+});
+app.get('/api/reset', function(req,res){
+  tools.deactivateVtn(function(result){
+    res.sendStatus(result)});
+});

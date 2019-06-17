@@ -13,18 +13,20 @@
 </head>
 <body ng-app="myApp" ng-controller="myController">
 <h1>{{title}}</h1>
-<button class="button button2" style="width: 15%" ng-click="clean()">Clean</button><br>
-<button class="button button2" style="width: 15%" ng-click="listUsers()">List Users</button>&nbsp;&nbsp;<br>
+<button class="button button2" style="width: 15%" ng-click="clean()">Clean</button>&nbsp;&nbsp;
+<button class="button button2" style="width: 15%" ng-click="reset()">Reset</button><br>
+
+<button class="button button2" style="width: 15%" ng-click="listUsers()">List Users</button> <br>
 
 <button class="button button2" style="width: 15%" ng-click="deleteUser()">Delete User</button>&nbsp;&nbsp;
-<input  class="box" style="width: 15%" type="" name="" placeholder="Phone Number" ng-model="phone2delete"><br>
+<input  class="box" style="width: 15%" type="" name="" placeholder="Phone Number" ng-model="phone2delete"> <br>
 
 <button class="button button2" style="width: 15%" ng-click="insertUser()">Insert Users</button>&nbsp;&nbsp;
-<input type="" name="" placeholder="Name" ng-model="name2insert">&nbsp
+<input type="" name="" placeholder="Name" ng-model="name2insert">&nbsp;&nbsp;
 <input type="" name="" placeholder="Phone Number" ng-model="phone2insert"><br>
 
 <button class="button button2" style="width: 15%" ng-click="checkToken()">Check Token</button>&nbsp;&nbsp;
-<input type="" name="" placeholder="Phone Number" ng-model="phone2check">&nbsp;
+<input type="" name="" placeholder="Phone Number" ng-model="phone2check">&nbsp;&nbsp;
 <input type="" name="" placeholder="Token" ng-model="token2check"> {{tokencheck}}<br>
 
 <button class="button button2" style="width: 15%" ng-click="showQR()">Show QR code</button>&nbsp;&nbsp;
