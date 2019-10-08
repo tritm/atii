@@ -65,4 +65,9 @@ function myController($scope, $http) {
       console.log(result.data);
     })
   }
+  $scope.reset = function(){
+    $http.get('/api/reset/').then(function(result){
+      console.log(result.data);
+    })
+  }
 }

@@ -3,6 +3,7 @@ var url = require('url');
 var express = require('express');
 var serveStatic = require('serve-static');
 var app = express();
+var tools = require('./public/src/tools');
 // OTPLIB
 const otplib = require('otplib');
 const qrcode = require('qrcode');
@@ -10,27 +11,15 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const mongourl = 'mongodb://localhost:27017';
 const dbName = 'atiidb';
-const http = require('http');
-const mongoose = require("mongoose");
+// const http = require('http');
 
-mongoose.connect(mongourl, function (err, client) {
-  const db = client.db(dbName);
-  global.collections = {
-    user     : db.collection(''),
-    document : db.collection('documents')
-  }
-});
-
-collections.find({}).toArray(function (err, docs) {
-  if (err) console.log(err);
-  console.log(docs)
-});
 
 app.use(serveStatic(path.join(__dirname, 'public')));
 
 //Tạo port để lắng nghe request từ client gọi lên.
 app.listen(3000,function(){
   console.log('Node server running @ http://localhost:3000');
+  console.log('__dirname = %s',__dirname);
 });
 
 // var listUsers = [{id: 1, name: 'Nguyễn Văn A'}, {id: 2, name: 'Hoàng Thị B'}, {id: 3, name: 'Phan Huy C'}];
@@ -63,37 +52,6 @@ app.get('/api/listUsers', function(req, res){
     });
   });
 });
-app.delete('/api/deleteHost/:mac2delete', function(req, res) {
-  const mac2delete = req.params.mac2delete;
-  var http = require("http");
-
-  var options = {
-    "method": "DELETE",
-    "hostname": "rd5",
-    "port": "8080",
-    "path": "/vtn/onos/v1/hosts/" + mac2delete + "/None",
-    "headers": {
-      "authorization": "Basic b25vczpyb2Nrcw==",
-      "cache-control": "no-cache",
-      "postman-token": "57898659-80f3-f5a0-2ae3-3d529dae25df"
-    }
-  };
-
-  var req = http.request(options, function (res) {
-    var chunks = [];
-
-    res.on("data", function (chunk) {
-      chunks.push(chunk);
-    });
-
-    res.on("end", function () {
-      var body = Buffer.concat(chunks);
-      console.log(body.toString());
-    });
-  });
-
-  req.end();
-})
 app.delete('/api/deleteUser/:phone2delete', function(req, res) {
   const phone2delete = req.params.phone2delete;
   MongoClient.connect(mongourl, function (err, client) {
@@ -130,8 +88,6 @@ app.post('/api/insertUser', function(req,res){
     });
   });
 });
-/*TODO: Inclue this clean function to Delete
-if var of delete = null, clean*/
 app.delete('/api/clean/', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
@@ -150,52 +106,8 @@ app.get('/api/checktoken', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
     const collection = db.collection('documents');
-    collection.find({phone:phone}).toArray(function(err, result) {
-      const isValid = otplib.authenticator.check(token, result["0"].secret);
-      res.send(isValid);
-      if (isValid) {
-        var http = require("http");
-
-        var options = {
-          "method": "POST",
-          "hostname": "rd5",
-          "port": "8080",
-          "path": "/vtn/onos/v1/hosts",
-          "headers": {
-            "authorization": "Basic b25vczpyb2Nrcw==",
-            "content-type": "application/json",
-            "cache-control": "no-cache",
-            "postman-token": "65c70ef8-4c55-85b7-4473-b3fd98af9183"
-          }
-        };
-        var req = http.request(options, function (res) {
-          var chunks = [];
-
-          res.on("data", function (chunk) {
-            chunks.push(chunk);
-          });
-
-          res.on("end", function () {
-            var body = Buffer.concat(chunks);
-            console.log(body.toString());
-          });
-        });
-        req.write(JSON.stringify({ id: '02:42:0A:07:01:03/None',
-          mac: '02:42:0A:07:01:03',
-          vlan: 'None',
-          configured: false,
-          ipAddresses: [ '10.7.1.3' ],
-          location: { elementId: 'of:0000525400e35d7e', port: '3' },
-          annotations:
-            { originalHostId: 'FA:16:3E:0E:69:44/None',
-              networkId: 'b0a95514-0aed-4360-8940-da9729ec2f33',
-              networkType: 'VSG',
-              portId: 'ebeffe7e-c5a4-42fc-8193-7a63a84a962a',
-              createTime: '1540864611904' } }));
-        req.end();
-      };
-      client.close();
-    });
+    tools.activateVtn(db, collection, phone, token, res, function(){});
+    client.close();
   });
 });
 app.get('/api/showQR/:phone2show', function(req, res) {
@@ -212,4 +124,8 @@ app.get('/api/showQR/:phone2show', function(req, res) {
       });
     });
   });
-})
+});
+app.get('/api/reset', function(req,res){
+  tools.deactivateVtn(function(result){
+    res.sendStatus(result)});
+});
