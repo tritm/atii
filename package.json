@@ -25,11 +25,15 @@
     "jquery": "^3.4.1",
     "mongodb": "^3.0.8",
     "mongoose": "^5.4.13",
-    "npm": "^6.1.0",
+    "npm": "^6.11.3",
     "otplib": "^9.0.0",
     "path": "^0.12.7",
     "pub": "^0.2.0",
     "qrcode": "^1.2.0",
     "serve-static": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
