@@ -35,5 +35,7 @@ hs_err_pid*
 */*/dist/
 */node_modules/
 */*/node_modules/
+node_modules
+node_modules/*/*
 package-lock.json
 wellcare-ghost/versions/
