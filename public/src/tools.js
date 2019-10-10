@@ -45,4 +45,29 @@ module.exports = {
     });
     request.end();
   },
+  listFlows: function (callback) {
+    var options = {
+      "method": "GET",
+      "hostname": "rd5",
+      "port": "8080",
+      "path": "/vtn/onos/v1/flows/",
+      "headers": {
+        "authorization": "Basic b25vczpyb2Nrcw==",
+        "cache-control": "no-cache",
+        "postman-token": "8e873279-11d0-8268-4208-510d5d213d37"
+      }
+    };
+    var req = http.request(options, function (res) {
+      var chunks = [];
+      res.on("data", function (chunk) {
+        chunks.push(chunk);
+      });
+      res.on("end", function () {
+        var body = Buffer.concat(chunks);
+        console.log(body.toString());
+      });
+    });
+
+    req.end();
+  }
 };

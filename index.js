@@ -52,6 +52,10 @@ app.get('/api/listUsers', function(req, res){
     });
   });
 });
+app.get('/api/listFlows', function(req,res){
+  tools.listFlows(function(result){
+    res.sendStatus(result)});
+});
 app.delete('/api/deleteUser/:phone2delete', function(req, res) {
   const phone2delete = req.params.phone2delete;
   MongoClient.connect(mongourl, function (err, client) {

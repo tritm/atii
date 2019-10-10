@@ -20,6 +20,14 @@ function myController($scope, $http) {
       console.log('Tri all ListUsers');
     })
   };
+  $scope.listFlows = function() {
+    $http.get('/api/listFlows').then(function(result) {
+      //NOTE: Kết quả result nhận về sẽ là 1 dict với rất nhiều trường: data, status, config, statusText, xhrStatus
+      //Mình thường chỉ cần trường data
+      $scope.listNames = result.data;
+      console.log('Tri all ListFlows');
+    })
+  };
   $scope.deleteHost = function(){
     $http.delete('/api/deleteHost/'+$scope.mac2delete).then(function(result){
     })
