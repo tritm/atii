@@ -24,7 +24,7 @@ function myController($scope, $http) {
     $http.get('/api/listFlows').then(function(result) {
       //NOTE: Kết quả result nhận về sẽ là 1 dict với rất nhiều trường: data, status, config, statusText, xhrStatus
       //Mình thường chỉ cần trường data
-      $scope.listNames = result.data;
+      $scope.listFlows = result.data;
       console.log('Tri all ListFlows');
     })
   };

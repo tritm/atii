@@ -49,5 +49,23 @@
 </table>
 
 <h4>List of switching entries</h4>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>TABLEID</th>
+        <th>PRIORITY</th>
+        <!--<th>STATE</th>-->
+        <th>SELECTOR</th>
+        <th>TREATMENT</th>
+    </tr>
+    <tr ng-repeat="u in listFlows">
+        <td>{{ u.id }}</td>
+        <td>{{ u.tableId}}</td>
+        <td>{{ u.priority }}</td>
+        <!--<td>{{ u.state}}</td>-->
+        <td>{{ u.selector}}</td>
+        <td>{{ u.treatment}}</td>
+    </tr>
+</table>
 </body>
 </html>
