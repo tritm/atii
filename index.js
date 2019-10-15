@@ -25,7 +25,7 @@ app.listen(3000,function(){
 // var listUsers = [{id: 1, name: 'Nguyễn Văn A'}, {id: 2, name: 'Hoàng Thị B'}, {id: 3, name: 'Phan Huy C'}];
 var listUsers;
 app.get('/', function(req, res){
-  res.redirect('/src/client.html');
+  res.redirect('/src/admin.html');
 });
 app.get('/client', function(req, res){
   res.redirect('/src/client.html');
@@ -51,6 +51,10 @@ app.get('/api/listUsers', function(req, res){
       client.close();
     });
   });
+});
+app.get('/api/listFlows', function(req,res){
+  tools.listFlows(function(result){
+    res.send(result)});
 });
 app.delete('/api/deleteUser/:phone2delete', function(req, res) {
   const phone2delete = req.params.phone2delete;

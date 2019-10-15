@@ -1,3 +1,7 @@
+table {
+    display: block;
+    overflow: scroll;
+}
 table, th , td {
     border: 1px solid grey;
     border-collapse: collapse;
@@ -25,3 +29,7 @@ table tr:nth-child(even) {
 .button3 {background-color: #f44336;} /* Red */
 .button4 {background-color: #e7e7e7; color: black;} /* Gray */
 .button5 {background-color: #555555;} /* Black */
+.wrapper {
+    position: relative;
+    overflow: auto;
+}
