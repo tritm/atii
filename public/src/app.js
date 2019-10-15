@@ -38,8 +38,23 @@ function myController($scope, $http) {
       console.log(result);
     })
   };
+  $scope.stopFlows = function() {
+    $http.get('/api/stopFlows').then(function(result) {
+      console.log(result);
+    })
+  };
+  $scope.addFlow = function() {
+    $http.post('/api/addFlow').then(function(result) {
+      console.log(result);
+    })
+  };
   $scope.deleteHost = function(){
     $http.delete('/api/deleteHost/'+$scope.mac2delete).then(function(result){
+    })
+  };
+  $scope.deleteFlow = function(){
+    $http.delete('/api/deleteFlow/'+$scope.flowid2delete).then(function(result){
+      console.log(result);
     })
   };
   $scope.deleteUser = function(){

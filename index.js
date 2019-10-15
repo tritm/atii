@@ -117,6 +117,17 @@ app.get('/api/checktoken', function(req,res){
 app.get('/api/stopOnu', function(req,res){
   tools.stopOnu(function(){});
 });
+app.delete('/api/deleteFlow/:flowid2delete', function(req,res){
+  const flowid2delete = req.params.flowid2delete
+  tools.deleteFlow(flowid2delete, function(result){
+    res.sendStatus(result);
+  });
+});
+app.post('/api/addFlow', function(req,res){
+  tools.addFlow(function(result){
+    res.sendStatus(result);
+  });
+});
 app.get('/api/startOnu', function(req,res){
   tools.startOnu(function(){});
 });

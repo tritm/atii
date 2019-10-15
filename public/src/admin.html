@@ -15,11 +15,13 @@
 <h1>{{title}}</h1>
 <button class="button button2" style="width: 15%" ng-click="clean()">Clean</button>&nbsp;&nbsp;
 <button class="button button2" style="width: 15%" ng-click="reset()">Reset</button>
-<button class="button button2" style="width: 15%" ng-click="stopOnu()">Stop ONU</button>
-<button class="button button2" style="width: 15%" ng-click="startOnu()">Start ONU</button><br>
+<button class="button button2" style="width: 15%" ng-click="startOnu()">Stop ONU</button>
+<button class="button button2" style="width: 15%" ng-click="stopOnu()">Start ONU</button><br>
 
 <button class="button button2" style="width: 15%" ng-click="listUsers()">List Users</button>&nbsp;&nbsp;
-<button class="button button2" style="width: 15%" ng-click="listFlows()">List Flows</button><br>
+<button class="button button2" style="width: 15%" ng-click="listFlows()">List Flows</button>
+<button class="button button2" style="width: 15%" ng-click="addFlow()">Add Flow</button><br>
+<!--<button class="button button2" style="width: 15%" ng-click="stopFlows()">Stop Flows</button><br>-->
 
 <button class="button button2" style="width: 15%" ng-click="deleteUser()">Delete User</button>&nbsp;&nbsp;
 <input  class="box" style="width: 15%" type="" name="" placeholder="Phone Number" ng-model="phone2delete"> <br>
@@ -32,8 +34,13 @@
 <input type="" name="" placeholder="Phone Number" ng-model="phone2check">&nbsp;&nbsp;
 <input type="" name="" placeholder="Token" ng-model="token2check"> {{tokencheck}}<br>
 
+<button class="button button2" style="width: 15%" ng-click="deleteFlow()">Delete a Flow</button>&nbsp;&nbsp;
+<input type="" name="" placeholder="Flow ID" ng-model="flowid2delete"><br>
+
 <button class="button button2" style="width: 15%" ng-click="showQR()">Show QR code</button>&nbsp;&nbsp;
 <input type="" name="" placeholder="Phone Number" ng-model="phone2show"><br>
+
+
 <img ng-src="{{imageUrl}}">
 
 <h4>List of Internet Subscribers</h4>
@@ -60,7 +67,7 @@
         <th>SELECTOR</th>
         <th>TREATMENT</th>
     </tr>
-    <tr ng-repeat="u in listFlows">
+    <tr ng-repeat="u in listFlows | orderBy:'-priority'">
         <td>{{ u.id }}</td>
         <td>{{ u.tableId}}</td>
         <td>{{ u.priority }}</td>
