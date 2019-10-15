@@ -28,6 +28,16 @@ function myController($scope, $http) {
       console.log('Tri all ListFlows');
     })
   };
+  $scope.stopOnu = function() {
+    $http.get('/api/stopOnu').then(function(result) {
+      console.log(result);
+    })
+  };
+  $scope.startOnu = function() {
+    $http.get('/api/startOnu').then(function(result) {
+      console.log(result);
+    })
+  };
   $scope.deleteHost = function(){
     $http.delete('/api/deleteHost/'+$scope.mac2delete).then(function(result){
     })

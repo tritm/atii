@@ -101,7 +101,7 @@ module.exports = {
     });
     req.end();
   },
-  stopUnu: function(callback) {
+  stopOnu: function(callback) {
     var options = {
       "method": "GET",
       "hostname": "192.168.100.43",

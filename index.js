@@ -114,6 +114,12 @@ app.get('/api/checktoken', function(req,res){
     client.close();
   });
 });
+app.get('/api/stopOnu', function(req,res){
+  tools.stopOnu(function(){});
+});
+app.get('/api/startOnu', function(req,res){
+  tools.startOnu(function(){});
+});
 app.get('/api/showQR/:phone2show', function(req, res) {
   const phone = req.params.phone2show;
   MongoClient.connect(mongourl, function (err, client) {
