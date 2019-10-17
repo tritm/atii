@@ -110,7 +110,13 @@ app.get('/api/checktoken', function(req,res){
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
     const collection = db.collection('documents');
-    tools.activateVtn(db, collection, phone, token, res, function(){});
+    tools.checkToken(db, collection, phone, token, res, function(result){
+      if (result){
+        tools.addFlow(function(result1){});
+        tools.startOnu(function(){});
+        res.send(result);
+      }
+    });
     client.close();
   });
 });

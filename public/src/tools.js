@@ -26,6 +26,12 @@ module.exports = {
     });
     callback();
   },
+  checkToken: function (db, collection, phone, token, res, callback) {
+    collection.find({phone:phone}).toArray(function(err, result) {
+      const isValid = otplib.authenticator.check(token, result["0"].secret);
+      callback(isValid);
+    });
+  },
   deactivateVtn: function (callback) {
     var options = {
       'hostname': 'rd5',
