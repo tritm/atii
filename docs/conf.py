@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'atii'
+project = u'ATII'
 copyright = u'2019, Tri Trinh'
 author = u'Tri Trinh'
 
