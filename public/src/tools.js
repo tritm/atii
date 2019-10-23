@@ -2,16 +2,16 @@ const otplib = require('otplib');
 var http = require('http');
 module.exports = {
   activateVtn: function (db, collection, phone, token, res, callback) {
-    collection.find({phone:phone}).toArray(function(err, result) {
+    collection.find({phone: phone}).toArray(function (err, result) {
       const isValid = otplib.authenticator.check(token, result["0"].secret);
       res.send(isValid);
       if (isValid) {
         var options = {
           'hostname': 'rd5',
-          'port':     '8080',
-          'path':     '/vtn/onos/v1/applications/org.opencord.vtn/active',
-          'auth':     'onos:rocks',
-          'method':   'POST'
+          'port': '8080',
+          'path': '/vtn/onos/v1/applications/org.opencord.vtn/active',
+          'auth': 'onos:rocks',
+          'method': 'POST'
         }
         var request = http.request(options, function (response) {
           console.log('STATUS: ' + response.statusCode);
@@ -22,12 +22,13 @@ module.exports = {
           });
         });
         request.end();
-      };
+      }
+      ;
     });
     callback();
   },
   checkToken: function (db, collection, phone, token, res, callback) {
-    collection.find({phone:phone}).toArray(function(err, result) {
+    collection.find({phone: phone}).toArray(function (err, result) {
       const isValid = otplib.authenticator.check(token, result["0"].secret);
       callback(isValid);
     });
@@ -35,10 +36,10 @@ module.exports = {
   deactivateVtn: function (callback) {
     var options = {
       'hostname': 'rd5',
-      'port':     '8080',
-      'path':     '/vtn/onos/v1/applications/org.opencord.vtn/active',
-      'auth':     'onos:rocks',
-      'method':   'DELETE'
+      'port': '8080',
+      'path': '/vtn/onos/v1/applications/org.opencord.vtn/active',
+      'auth': 'onos:rocks',
+      'method': 'DELETE'
     }
     var request = http.request(options, function (response) {
       console.log('STATUS: ' + response.statusCode);
@@ -105,7 +106,7 @@ module.exports = {
     });
     req.end();
   },
-  stopOnu: function(callback) {
+  stopOnu: function (callback) {
     var options = {
       "method": "GET",
       "hostname": "192.168.100.43",
@@ -128,12 +129,12 @@ module.exports = {
     });
     req.end();
   },
-  deleteFlow: function(flowid2delete, callback) {
+  deleteFlow: function (flowid2delete, callback) {
     var options = {
       "method": "DELETE",
       "hostname": "rd5",
       "port": "8080",
-      "path": "/vtn/onos/v1/flows/of:0000525400a31bb6/"+flowid2delete,
+      "path": "/vtn/onos/v1/flows/of:0000525400a31bb6/" + flowid2delete,
       "headers": {
         "authorization": "Basic b25vczpyb2Nrcw==",
         "cache-control": "no-cache",
@@ -152,7 +153,7 @@ module.exports = {
     });
     req.end();
   },
-  addFlow: function(callback) {
+  addFlow: function (callback) {
     var options = {
       "method": "POST",
       "hostname": "rd5",
@@ -181,5 +182,36 @@ module.exports = {
 
     req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400a31bb6\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_PUSH\",\"ethernetType\": \"0x8100\"},{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_ID\",\"vlanId\":222},{\"type\": \"OUTPUT\", \"port\": \"3\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"9\"}]}}");
     req.end();
+  },
+  addFlow1: function (callback) {
+    var options = {
+      "method": "POST",
+      "hostname": "rd5",
+      "port": "8080",
+      "path": "/vtn/onos/v1/flows/of:0000525400a31bb6",
+      "headers": {
+        "authorization": "Basic b25vczpyb2Nrcw==",
+        "cache-control": "no-cache",
+        "content-type": "application/json",
+        "postman-token": "2f08a392-4391-6441-06a7-e6affd00e4ce"
+      }
+    };
+
+    var req = http.request(options, function (res) {
+      var chunks = [];
+
+      res.on("data", function (chunk) {
+        chunks.push(chunk);
+      });
+
+      res.on("end", function () {
+        var body = Buffer.concat(chunks);
+        console.log(body.toString());
+      });
+    });
+
+    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400a31bb6\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_POP\"}, {\"type\": \"OUTPUT\", \"port\": \"9\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"3\"}, {\"type\": \"VLAN_VID\",\"vlanId\": \"222\"}]}}");
+    req.end();
   }
-};
+}
+
