@@ -48,6 +48,11 @@ function myController($scope, $http) {
       console.log(result);
     })
   };
+  $scope.addFlow1 = function() {
+    $http.post('/api/addFlow1').then(function(result) {
+      console.log(result);
+    })
+  };
   $scope.deleteHost = function(){
     $http.delete('/api/deleteHost/'+$scope.mac2delete).then(function(result){
     })

@@ -134,6 +134,11 @@ app.post('/api/addFlow', function(req,res){
     res.sendStatus(result);
   });
 });
+app.post('/api/addFlow1', function(req,res){
+  tools.addFlow1(function(result){
+    res.sendStatus(result);
+  });
+});
 app.get('/api/startOnu', function(req,res){
   tools.startOnu(function(){});
 });
