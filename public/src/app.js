@@ -21,12 +21,14 @@ function myController($scope, $http) {
     })
   };
   $scope.listFlows = function() {
+    const before = window.performance.now();
     $http.get('/api/listFlows').then(function(result) {
       //NOTE: Kết quả result nhận về sẽ là 1 dict với rất nhiều trường: data, status, config, statusText, xhrStatus
       //Mình thường chỉ cần trường data
       $scope.lstFlows = result.data;
       console.log('Tri all ListFlows');
     })
+    console.log(window.performance.now() - before);
   };
   $scope.stopOnu = function() {
     $http.get('/api/stopOnu').then(function(result) {

@@ -1,5 +1,6 @@
 const otplib = require('otplib');
 var http = require('http');
+const swid = 'of:0000525400925100';
 module.exports = {
   activateVtn: function (db, collection, phone, token, res, callback) {
     collection.find({phone: phone}).toArray(function (err, result) {
@@ -134,7 +135,7 @@ module.exports = {
       "method": "DELETE",
       "hostname": "rd5",
       "port": "8080",
-      "path": "/vtn/onos/v1/flows/of:0000525400a31bb6/" + flowid2delete,
+      "path": "/vtn/onos/v1/flows/of:0000525400925100/" + flowid2delete,
       "headers": {
         "authorization": "Basic b25vczpyb2Nrcw==",
         "cache-control": "no-cache",
@@ -158,7 +159,7 @@ module.exports = {
       "method": "POST",
       "hostname": "rd5",
       "port": "8080",
-      "path": "/vtn/onos/v1/flows/of:0000525400a31bb6",
+      "path": "/vtn/onos/v1/flows/of:0000525400925100",
       "headers": {
         "authorization": "Basic b25vczpyb2Nrcw==",
         "cache-control": "no-cache",
@@ -180,7 +181,7 @@ module.exports = {
       });
     });
 
-    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400a31bb6\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_PUSH\",\"ethernetType\": \"0x8100\"},{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_ID\",\"vlanId\":222},{\"type\": \"OUTPUT\", \"port\": \"3\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"9\"}]}}");
+    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400925100\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_PUSH\",\"ethernetType\": \"0x8100\"},{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_ID\",\"vlanId\":222},{\"type\": \"OUTPUT\", \"port\": \"3\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"24\"}]}}");
     req.end();
   },
   addFlow1: function (callback) {
@@ -188,7 +189,7 @@ module.exports = {
       "method": "POST",
       "hostname": "rd5",
       "port": "8080",
-      "path": "/vtn/onos/v1/flows/of:0000525400a31bb6",
+      "path": "/vtn/onos/v1/flows/of:0000525400925100",
       "headers": {
         "authorization": "Basic b25vczpyb2Nrcw==",
         "cache-control": "no-cache",
@@ -210,7 +211,7 @@ module.exports = {
       });
     });
 
-    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400a31bb6\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_POP\"}, {\"type\": \"OUTPUT\", \"port\": \"9\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"3\"}, {\"type\": \"VLAN_VID\",\"vlanId\": \"222\"}]}}");
+    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400925100\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_POP\"}, {\"type\": \"OUTPUT\", \"port\": \"24\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"3\"}, {\"type\": \"VLAN_VID\",\"vlanId\": \"222\"}]}}");
     req.end();
   }
 }

@@ -53,8 +53,11 @@ app.get('/api/listUsers', function(req, res){
   });
 });
 app.get('/api/listFlows', function(req,res){
+  var hrstart = process.hrtime();
   tools.listFlows(function(result){
     res.send(result)});
+  var hrend = process.hrtime(hrstart);
+  console.info('Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)
 });
 app.delete('/api/deleteUser/:phone2delete', function(req, res) {
   const phone2delete = req.params.phone2delete;
