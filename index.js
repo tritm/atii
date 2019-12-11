@@ -27,6 +27,9 @@ var listUsers;
 app.get('/', function(req, res){
   res.redirect('/src/admin.html');
 });
+app.get('/src/admin.html', function(req, res){
+  res.redirect('/src/admin.html');
+});
 app.get('/client', function(req, res){
   res.redirect('/src/client.html');
 });
@@ -57,7 +60,7 @@ app.get('/api/listFlows', function(req,res){
   tools.listFlows(function(result){
     res.send(result)});
   var hrend = process.hrtime(hrstart);
-  console.info('Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)
+  console.info('listFlows: Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)
 });
 app.delete('/api/deleteUser/:phone2delete', function(req, res) {
   const phone2delete = req.params.phone2delete;
@@ -108,15 +111,25 @@ app.delete('/api/clean/', function(req,res){
   });
 });
 app.get('/api/checktoken', function(req,res){
+  var hrstart = process.hrtime();
   const phone = req.query.phone;
   const token = req.query.token;
   MongoClient.connect(mongourl, function (err, client) {
     const db = client.db(dbName);
     const collection = db.collection('documents');
     tools.checkToken(db, collection, phone, token, res, function(result){
+      var hrend = process.hrtime(hrstart);
+      console.info('Compare ToTP Token time (hr): %dms', hrend[1] / 1000000);
       if (result){
-        tools.addFlow(function(result1){});
+        var hrstart = process.hrtime();
+        tools.addFlow(function(result1){
+        });
+        var hrend = process.hrtime(hrstart);
+        console.info('Addflow time: %dms', hrend[1] / 1000000);
+        var hrstart = process.hrtime();
         tools.startOnu(function(){});
+        var hrend = process.hrtime(hrstart);
+        console.info('start ONU time: %dms', hrend[1] / 1000000);
         res.send(result);
       }
     });

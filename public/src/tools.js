@@ -29,10 +29,13 @@ module.exports = {
     callback();
   },
   checkToken: function (db, collection, phone, token, res, callback) {
+    var hrstart = process.hrtime();
     collection.find({phone: phone}).toArray(function (err, result) {
       const isValid = otplib.authenticator.check(token, result["0"].secret);
       callback(isValid);
     });
+    var hrend = process.hrtime(hrstart);
+    console.info('checkToken: Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)
   },
   deactivateVtn: function (callback) {
     var options = {
@@ -87,7 +90,8 @@ module.exports = {
   startOnu: function (callback) {
     var options = {
       "method": "GET",
-      "hostname": "192.168.100.43",
+      // "hostname": "192.168.100.43",
+      "hostname": "localhost",
       "port": null,
       "path": "/cgi-bin/hoge3.cgi?onu=X12345678X&method=ON",
       "headers": {
@@ -110,7 +114,8 @@ module.exports = {
   stopOnu: function (callback) {
     var options = {
       "method": "GET",
-      "hostname": "192.168.100.43",
+      // "hostname": "192.168.100.43",
+      "hostname": "localhost",
       "port": null,
       "path": "/cgi-bin/hoge3.cgi?onu=X12345678X&method=OFF",
       "headers": {
@@ -135,7 +140,7 @@ module.exports = {
       "method": "DELETE",
       "hostname": "rd5",
       "port": "8080",
-      "path": "/vtn/onos/v1/flows/of:0000525400925100/" + flowid2delete,
+      "path": "/vtn/onos/v1/flows/of:000052540080a532/" + flowid2delete,
       "headers": {
         "authorization": "Basic b25vczpyb2Nrcw==",
         "cache-control": "no-cache",
@@ -159,7 +164,7 @@ module.exports = {
       "method": "POST",
       "hostname": "rd5",
       "port": "8080",
-      "path": "/vtn/onos/v1/flows/of:0000525400925100",
+      "path": "/vtn/onos/v1/flows/of:000052540080a532",
       "headers": {
         "authorization": "Basic b25vczpyb2Nrcw==",
         "cache-control": "no-cache",
@@ -181,7 +186,7 @@ module.exports = {
       });
     });
 
-    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400925100\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_PUSH\",\"ethernetType\": \"0x8100\"},{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_ID\",\"vlanId\":222},{\"type\": \"OUTPUT\", \"port\": \"3\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"24\"}]}}");
+    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:000052540080a532\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_PUSH\",\"ethernetType\": \"0x8100\"},{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_ID\",\"vlanId\":222},{\"type\": \"OUTPUT\", \"port\": \"11\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"8\"}]}}");
     req.end();
   },
   addFlow1: function (callback) {
@@ -189,7 +194,7 @@ module.exports = {
       "method": "POST",
       "hostname": "rd5",
       "port": "8080",
-      "path": "/vtn/onos/v1/flows/of:0000525400925100",
+      "path": "/vtn/onos/v1/flows/of:000052540080a532",
       "headers": {
         "authorization": "Basic b25vczpyb2Nrcw==",
         "cache-control": "no-cache",
@@ -211,7 +216,7 @@ module.exports = {
       });
     });
 
-    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:0000525400925100\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_POP\"}, {\"type\": \"OUTPUT\", \"port\": \"24\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"3\"}, {\"type\": \"VLAN_VID\",\"vlanId\": \"222\"}]}}");
+    req.write("{\"priority\": 56000, \"tableId\": 0, \"timeout\": 0, \"isPermanent\": true, \"deviceId\": \"of:000052540080a532\", \"treatment\": { \"instructions\": [{\"type\": \"L2MODIFICATION\",\"subtype\": \"VLAN_POP\"}, {\"type\": \"OUTPUT\", \"port\": \"8\"}]},\"selector\": {\"criteria\":[{\"type\": \"IN_PORT\", \"port\": \"11\"}, {\"type\": \"VLAN_VID\",\"vlanId\": \"222\"}]}}");
     req.end();
   }
 }
