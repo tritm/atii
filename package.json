@@ -21,7 +21,7 @@
   "homepage": "https://github.com/tritm/atii#readme",
   "dependencies": {
     "angular-ui-bootstrap": "^2.5.6",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "jquery": "^3.4.1",
     "mongodb": "^3.0.8",
     "mongoose": "^5.4.13",
